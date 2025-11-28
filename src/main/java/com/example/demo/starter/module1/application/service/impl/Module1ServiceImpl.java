@@ -7,6 +7,7 @@ import com.example.demo.starter.module1.entity.Module1Entity;
 import com.example.demo.starter.shared.base.infrastructure.configuration.mapper.Mapper;
 import com.example.demo.starter.shared.base.repository.BaseRepository;
 import com.example.demo.starter.shared.base.service.impl.BaseServiceImpl;
+import com.example.demo.starter.shared.util.response.ServiceResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,5 +22,10 @@ public class Module1ServiceImpl extends BaseServiceImpl<Module1Entity, Module1Dt
     @Override
     protected void updateEntity(Module1Dto dto, Module1Entity entity) {
         entity.setName(dto.getName());
+    }
+
+    @Override
+    public ServiceResponse<Module1Dto> create(Module1Dto dto) {
+        return super.create(dto);
     }
 }
