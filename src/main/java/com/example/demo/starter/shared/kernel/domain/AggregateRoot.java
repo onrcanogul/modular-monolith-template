@@ -1,13 +1,13 @@
 package com.example.demo.starter.shared.kernel.domain;
 
+import com.example.demo.starter.shared.base.entity.BaseEntity;
 import com.example.demo.starter.shared.kernel.event.DomainEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AggregateRoot<TId> {
+public abstract class AggregateRoot extends BaseEntity {
 
-    protected TId id;
     private final List<DomainEvent> events = new ArrayList<>();
 
     protected void registerEvent(DomainEvent event) {
