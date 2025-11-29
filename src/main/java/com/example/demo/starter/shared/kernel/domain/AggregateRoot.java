@@ -1,7 +1,7 @@
 package com.example.demo.starter.shared.kernel.domain;
 
 import com.example.demo.starter.shared.base.entity.BaseEntity;
-import com.example.demo.starter.shared.kernel.event.DomainEvent;
+import com.example.demo.starter.shared.kernel.event.domain.DomainEvent;
 
 import java.util.ArrayList;
 import java.util.List;

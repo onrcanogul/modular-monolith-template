@@ -4,7 +4,7 @@ package com.example.demo.starter.shared.base.service.impl;
 import com.example.demo.starter.shared.base.dto.BaseDto;
 import com.example.demo.starter.shared.base.entity.BaseEntity;
 import com.example.demo.starter.shared.exception.NotFoundException;
-import com.example.demo.starter.shared.base.infrastructure.configuration.mapper.Mapper;
+import com.example.demo.starter.shared.base.configuration.mapper.Mapper;
 import com.example.demo.starter.shared.base.repository.BaseRepository;
 import com.example.demo.starter.shared.base.service.BaseService;
 import com.example.demo.starter.shared.util.response.NoContent;
