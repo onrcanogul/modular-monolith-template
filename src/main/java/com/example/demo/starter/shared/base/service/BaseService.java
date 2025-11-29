@@ -2,8 +2,8 @@ package com.example.demo.starter.shared.base.service;
 
 import com.example.demo.starter.shared.base.dto.BaseDto;
 import com.example.demo.starter.shared.base.entity.BaseEntity;
-import com.example.demo.starter.shared.util.response.NoContent;
-import com.example.demo.starter.shared.util.response.ServiceResponse;
+import com.example.demo.starter.shared.common.response.NoContent;
+import com.example.demo.starter.shared.common.response.ServiceResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

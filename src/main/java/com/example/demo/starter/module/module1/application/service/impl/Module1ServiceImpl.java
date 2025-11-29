@@ -1,6 +1,5 @@
 package com.example.demo.starter.module.module1.application.service.impl;
 
-
 import com.example.demo.starter.module.module1.application.dto.Module1Dto;
 import com.example.demo.starter.module.module1.application.service.Module1Service;
 import com.example.demo.starter.module.module1.domain.entity.Module1Entity;
@@ -8,7 +7,7 @@ import com.example.demo.starter.module.module1.infrastructure.repository.Module1
 import com.example.demo.starter.shared.base.configuration.mapper.Mapper;
 import com.example.demo.starter.shared.base.service.impl.BaseServiceImpl;
 import com.example.demo.starter.shared.kernel.event.domain.DomainEventPublisher;
-import com.example.demo.starter.shared.util.response.ServiceResponse;
+import com.example.demo.starter.shared.common.response.ServiceResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -25,11 +24,6 @@ public class Module1ServiceImpl extends BaseServiceImpl<Module1Entity, Module1Dt
         this.repository = repository;
         this.mapper = mapper;
         this.eventPublisher = eventPublisher;
-    }
-
-    @Override
-    protected void updateEntity(Module1Dto dto, Module1Entity entity) {
-        entity.setName(dto.getName());
     }
 
     @Override

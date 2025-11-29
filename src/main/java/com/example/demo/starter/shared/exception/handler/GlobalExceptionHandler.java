@@ -4,7 +4,7 @@ import com.example.demo.starter.shared.exception.BadRequestException;
 import com.example.demo.starter.shared.exception.ForbiddenException;
 import com.example.demo.starter.shared.exception.NotFoundException;
 import com.example.demo.starter.shared.exception.UnauthorizedException;
-import com.example.demo.starter.shared.util.response.ServiceResponse;
+import com.example.demo.starter.shared.common.response.ServiceResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

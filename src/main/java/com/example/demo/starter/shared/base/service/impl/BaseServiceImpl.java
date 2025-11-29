@@ -7,8 +7,8 @@ import com.example.demo.starter.shared.exception.NotFoundException;
 import com.example.demo.starter.shared.base.configuration.mapper.Mapper;
 import com.example.demo.starter.shared.base.repository.BaseRepository;
 import com.example.demo.starter.shared.base.service.BaseService;
-import com.example.demo.starter.shared.util.response.NoContent;
-import com.example.demo.starter.shared.util.response.ServiceResponse;
+import com.example.demo.starter.shared.common.response.NoContent;
+import com.example.demo.starter.shared.common.response.ServiceResponse;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -44,7 +44,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, D extends BaseDto> i
 
     public ServiceResponse<D> update(D dto, UUID id) {
         T entity = repository.findById(id).orElseThrow(() -> new NotFoundException("Not found"));
-        updateEntity(dto, entity);
+        entity = mapper.toEntity(dto);
         repository.save(entity);
         return ServiceResponse.success(dto, 200);
     }
@@ -55,6 +55,4 @@ public abstract class BaseServiceImpl<T extends BaseEntity, D extends BaseDto> i
         repository.save(entity);
         return ServiceResponse.success(204);
     }
-
-    protected abstract void updateEntity(D dto, T entity);
 }

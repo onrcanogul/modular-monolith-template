@@ -1,4 +1,4 @@
-package com.example.demo.starter.shared.util.response;
+package com.example.demo.starter.shared.common.response;
 
 import lombok.Getter;
 import lombok.Setter;
